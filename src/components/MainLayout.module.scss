@@ -1,0 +1,24 @@
+@import "../styles/index";
+
+.root {
+  margin: 0 auto;
+  height: 100%;
+
+  width: $container-xs-width;
+
+  @media(min-width: $screen-sm-min) {
+    width: $container-xs-width;
+  }
+
+  @media(min-width: $screen-md-min) {
+    width: $container-md-width;
+  }
+
+  @media(min-width: $screen-lg-min) {
+    width: $container-lg-width;
+  }
+
+  @media(min-width: $screen-xl-min) {
+    width: $container-xl-width;
+  }
+}

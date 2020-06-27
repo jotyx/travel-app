@@ -1,0 +1,21 @@
+@import "../styles/index";
+
+.tiny {
+  margin-left: $padding-5;
+  margin-right: $padding-5;
+}
+
+.small {
+  margin-left: $padding-15;
+  margin-right: $padding-15;
+}
+
+.medium {
+  margin-left: $padding-40;
+  margin-right: $padding-40;
+}
+
+.large {
+  margin-left: $padding-60;
+  margin-right: $padding-60;
+}
