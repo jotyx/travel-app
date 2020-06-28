@@ -1,0 +1,9 @@
+@import "../styles/index";
+
+.plusSign {
+  width: 16px;
+  height: 16px;
+  right: 20px;
+  top: calc(50% - 16px/2);
+  background-color: red;
+}

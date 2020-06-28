@@ -1,0 +1,70 @@
+@import "../styles/index";
+
+.root {
+  height: 35px;
+  width: 400px;
+  display: flex;
+
+  input {
+    background: #FFFFFF;
+    border: 1px solid #F1F1F2;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 5px 0 5px 15px;
+    width: 100%;
+    outline:0;
+    font-size: 12px;
+  }
+
+  input::placeholder {
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #76787B;
+  }
+}
+
+.activeInput {
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.icon {
+  margin-top: 6px;
+  margin-left: 365px;
+  position: absolute;
+  z-index: 999;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.container {
+  background: #FFFFFF;
+  border: 1px solid #F1F1F2;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+  width: 400px;
+  position: absolute;
+  margin-top: 78px;
+}
+
+.suggestion {
+  padding: 5px;
+  width: 400px;
+  cursor: pointer;
+
+  &:not(:first-child) {
+    border-top: 1px solid #F1F1F2;
+  }
+}
+
+.suggestionIcon {
+  position: absolute;
+  margin-left: 5px;
+}
+
+.suggestionText {
+  margin-left: 30px;
+  font-size: 12px;
+  line-height: 16px;
+}

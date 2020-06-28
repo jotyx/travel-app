@@ -5,7 +5,7 @@ import classnames from "classnames";
 
 import style from "./Text.module.scss";
 
-export const Text = ({value, fontSize, bold, textAlign, paragraphs}) => (
+export const Text = ({value, fontSize, bold, textAlign, paragraphs, secondaryColor}) => (
     <ReactMarkdown
         className={
             classnames(
@@ -14,6 +14,7 @@ export const Text = ({value, fontSize, bold, textAlign, paragraphs}) => (
                     [style.bold]: bold,
                     [style.textAlignRight]: textAlign === Text.TextAlignEnum.RIGHT,
                     [style.textAlignCenter]: textAlign === Text.TextAlignEnum.CENTER,
+                    [style.grayColor]: secondaryColor,
                 },
             )
         }
@@ -47,6 +48,7 @@ Text.propTypes = {
     bold: PropTypes.bool,
     textAlign: PropTypes.oneOf(Object.values(Text.TextAlignEnum)),
     paragraphs: PropTypes.bool,
+    secondaryColor: PropTypes.bool,
 };
 
 Text.defaultProps = {

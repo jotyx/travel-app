@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
-        title: `Template`,
-        description: `Template for the new site`,
+        title: `Travel App`,
+        description: `Travel App`,
         author: `@jotyx`,
     },
     plugins: [

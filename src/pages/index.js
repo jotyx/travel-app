@@ -4,45 +4,32 @@ import PropTypes from "prop-types";
 
 import {
     MainLayout,
-    MarginLayout,
-    VerticalSpace,
-    BackgroundBox,
-    Text,
-    Seo,
-    Button,
-    Link,
+    FlexLayout,
 } from "components";
 
-import {toggleDarkMode} from "../state/actions";
-import {getIsDarkMode} from "../state/selectors";
+import {Menu, ActiveTrips} from "./layout";
+import {Home} from "./home";
+import {Favourites} from "./favourites";
+import {getActivePage} from "../state/selectors";
 
-const IndexPage = ({isDarkMode, toggleMode}) => (
-    <MainLayout>
-        <Seo title="Home" />
-        <BackgroundBox color={isDarkMode ? "#242424" : "#ebebeb"} fullHeight>
-            <MarginLayout size={MarginLayout.SIZES.MEDIUM}>
-                <VerticalSpace />
-                <Text value="content" bold fontSize={Text.SIZE.SIZE_36} paragraphs color="#FFFFFF" />
-                <VerticalSpace />
-                <Button name="Change dark mode" onClick={toggleMode} type="secondary" />
-                <VerticalSpace />
-                <Link to="/secondPage/" name="Go to second page" />
-            </MarginLayout>
-        </BackgroundBox>
-    </MainLayout>
+const IndexPage = ({activePage}) => (
+    <FlexLayout>
+        <Menu />
+        <MainLayout>
+            {activePage === "home" && <Home />}
+            {activePage === "favourites" && <Favourites />}
+        </MainLayout>
+        <ActiveTrips />
+    </FlexLayout>
 );
 
 IndexPage.propTypes = {
-    isDarkMode: PropTypes.bool.isRequired,
-    toggleMode: PropTypes.func.isRequired,
+    activePage: PropTypes.string.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-    isDarkMode: getIsDarkMode(state),
+    activePage: getActivePage(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-    toggleMode: () => dispatch(toggleDarkMode()),
-});
 
-export default connect(mapStateToProps, mapDispatchToProps)(IndexPage);
+export default connect(mapStateToProps)(IndexPage);

@@ -1,0 +1,31 @@
+@import "../styles/index";
+
+.root {
+  background-color: #F9F9FA;
+  border-radius: 10px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.innerWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.buttonsWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonWrapper {
+  margin-right: 15px;
+}
+
+.mainWrapper {
+  margin-left: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

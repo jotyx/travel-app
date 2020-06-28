@@ -1,0 +1,20 @@
+@import "../styles/index";
+
+.root {
+  padding: 10px;
+  display: flex;
+  cursor: pointer;
+  background: #F9F9FA;
+  border-radius: 10px;
+  width: fit-content;
+  margin-right: 10px;
+}
+
+.buttonText {
+  margin-left: 5px;
+}
+
+.icon {
+  margin-right: 5px;
+  margin-top: -2px;
+}

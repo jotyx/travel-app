@@ -28,4 +28,5 @@ BackgroundBox.propTypes = {
 BackgroundBox.defaultProps = {
     flex: false,
     fullHeight: false,
+    color: "#F9F9FA",
 };

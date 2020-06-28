@@ -1,14 +1,33 @@
 import React from "react";
-// import PropTypes from "prop-types";
 
-import {VerticalSpace} from "components";
+import {
+    MarginLayout,
+    VerticalSpace,
+    Text,
+    Seo,
+    HorizontalLine,
+} from "components";
+
+import {
+    NewTrip,
+    Trips,
+} from "./components";
 
 const Container = () => (
     <>
-        content
-        <VerticalSpace />
+        <Seo title="Home" />
+        <MarginLayout size={MarginLayout.SIZES.MEDIUM}>
+            <VerticalSpace size={VerticalSpace.SIZES.SIZE_40} />
+            <Text value="Home" fontSize={Text.SIZE.SIZE_24} paragraphs color="#FFFFFF" />
 
-        another
+            <VerticalSpace />
+            <HorizontalLine />
+            <VerticalSpace size={VerticalSpace.SIZES.SIZE_40} />
+
+            <NewTrip />
+            <VerticalSpace size={VerticalSpace.SIZES.SIZE_40} />
+            <Trips />
+        </MarginLayout>
     </>
 );
 
