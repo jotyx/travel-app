@@ -37,3 +37,15 @@ Quick look on project structure inside `./src` directory
 4.  **`/state`**: This directory contains redux state management files.
 
 5.  **`/styles`**: This directory contains globally applicable scss styles and variables.
+
+## 🛠 Working parts (read before using the app!)
+
+1. Add recent trip to favourites.
+
+2. Remove recent trip from favourites.
+
+3. Delete draft trip.
+
+4. Search for new country with the suggestions downloaded from the third-party.
+
+5. Move between pages "Home" and "Favourites".
